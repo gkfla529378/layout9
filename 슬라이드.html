@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <style>
+        li > img{
+            width: 100%;
+        }
+    </style>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        //기본적인bxslider사용법
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+
+          $('.slider2').bxSlider();
+        
+          //bxslider2개 이상 사용하기
+        //슬라이더를 사용할 클래스의 이름을 바꿔서 사용
+          $(".slider3").bxSlider({
+              auto: true, //이미지 회전이 자동으로 변경
+              speed:500, //이미지 전환 속도1/1000초기준
+              pause:4000, //이미지가 변경되었을 경우 잠시 움직임을 고정하는 시간
+              mode:"fade", //이미지가 전환되는 효과'fade',.'horizontal','vertical'
+              autoControls:true, //이미지 전환 효과 버튼 출력
+              pager:true //이미지 전환 인디케이터 사용
+          });
+        });
+
+        
+      </script>
+    
+</head>
+
+<body>
+    <div>
+        <ul class="slider">
+            <li>
+                <img src="./img/h.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/j.png" alt="">
+            </li>
+            <li>
+                <img src="./img/peng1.jpg" alt="">
+            </li>
+            <li>
+                <img src="./img/peng10.jpg" alt="">
+            </li>
+        </ul>
+<br><br><br><br>
+        <ul class="slider2">
+            <li><img src="./img/h.jpg" alt=""></li>
+            <li><img src="./img/m.png" alt=""></li>
+            <li><img src="./img/p.png" alt=""></li>
+            <li><img src="./img/l.png" alt=""></li>
+            <li><img src="./img/s.jpg" alt=""></li>
+        </ul>
+
+        <br><br><br><br>
+        <ul class="slider3">
+            <li><img src="./img/h.jpg" alt=""></li>
+            <li><img src="./img/m.png" alt=""></li>
+            <li><img src="./img/p.png" alt=""></li>
+            <li><img src="./img/l.png" alt=""></li>
+            <li><img src="./img/s.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>
